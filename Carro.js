@@ -26,6 +26,11 @@ var Carro = /** @class */ (function () {
         console.log("O carro " + this.modelo + " do ano " + this.ano + " e placa " + this.placa + " e de cor " + this.cor + " acabou de parar");
         console.log("O carro está desligado. " + this.ligado);
     };
+    Carro.prototype.getInfo = function () {
+        var info;
+        info = "CARRO: " + this.modelo + "/" + this.ano + "/" + this.placa + "/" + this.cor;
+        return info;
+    };
     return Carro;
 }());
 exports.Carro = Carro;

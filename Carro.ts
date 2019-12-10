@@ -32,4 +32,10 @@
         console.log(`O carro ${this.modelo} do ano ${this.ano} e placa ${this.placa} e de cor ${this.cor} acabou de parar`);
         console.log("O carro está desligado. "+this.ligado)
     }
+
+    getInfo():string{
+        var info: string;
+        info = `CARRO: ${this.modelo}/${this.ano}/${this.placa}/${this.cor}`;
+        return info;
+    }
 }
