@@ -1,15 +1,16 @@
 "use strict";
-//Nesse programa nossa classe esta sendo encapsulada, ou seja, usamos o "private", já os get e set são para pegar valor(get) e enviar(set) valor, são necessários porque atribuimos o encapsulamento.
 exports.__esModule = true;
 var Carro = /** @class */ (function () {
     function Carro() {
     }
-    /*Agora preciso de métodos especificos (Getters e Setters) para manipular meus atributos */
+    //------------------------------------------------//
     Carro.prototype.getPlaca = function () {
         return this.placa;
+        //estrutura  do get(envia valor usuário ver)
     };
     Carro.prototype.setPlaca = function (placa) {
         this.placa = placa;
+        //estutura do set(pegar valor usuário digita)
     };
     //------------------------------------------------//
     Carro.prototype.getCor = function () {
@@ -35,7 +36,7 @@ var Carro = /** @class */ (function () {
     //------------------------------------------------//
     Carro.prototype.setAno = function (ano) {
         if (ano < 1900 || ano > 2100) {
-            console.log("Ei!! valor do anor está errado");
+            console.log("Ano inválido");
         }
         else {
             this.ano = ano;
@@ -44,35 +45,31 @@ var Carro = /** @class */ (function () {
     //------------------------------------------------//
     //------------------------------------------------//
     //------------------------------------------------//
+    //Criando funcionalidade
     Carro.prototype.ligar = function () {
         this.ligado = true;
-        console.log("Carro " + this.modelo + "  acabou de ser ligado");
     };
     Carro.prototype.desligar = function () {
         this.ligado = false;
-        console.log("Carro " + this.modelo + " esta desligado");
     };
     Carro.prototype.andar = function () {
-        // mostrando mensagens usando concatenações
-        if (this.ligado) {
-            console.log("O carro " + this.modelo + " (" + this.placa + ") do ano " + this.ano + " ta andando...");
+        if (this.ligado != true) {
+            this.ligar();
         }
-        else {
-            console.log("Para andar, ligue o carro " + this.modelo);
-        }
+        console.log("O carro está ligado. " + this.ligado);
+        console.log("O carro " + this.modelo + " do ano " + this.ano + " e placa " + this.placa + " e de cor " + this.cor + " ta andando...");
     };
     Carro.prototype.parar = function () {
-        // mostrando mensagens usando expression languages
-        if (this.ligado) {
-            console.log("O carro " + this.modelo + " (" + this.placa + ") do ano " + this.ano + " acabou de parar");
+        if (this.ligado == true) {
+            this.desligar();
         }
-        else {
-            console.log("O carro modelo " + this.modelo + " está desligado");
-        }
+        //Mostrando mensagens usando expression language(crase no lugar das aspas e ${}).
+        console.log("O carro " + this.modelo + " do ano " + this.ano + " e placa " + this.placa + " e de cor " + this.cor + " acabou de parar");
+        console.log("O carro está desligado. " + this.ligado);
     };
     Carro.prototype.getInfo = function () {
         var info;
-        info = "CARRO: " + this.modelo + " / " + this.ano + " / " + this.placa + " / " + this.cor + " / " + this.ligado;
+        info = "CARRO: " + this.modelo + "/" + this.ano + "/" + this.placa + "/" + this.cor;
         return info;
     };
     return Carro;
