@@ -6,7 +6,13 @@ import {Produto} from "./Produto";
 
  p2 = new Produto(857,"Smartphone","Samsung/Preto/128gb",2199.00,75,"https://imagenSamsung");
 
+ /* Ao colocarmos as classes em texto automaticamento o javascript coloca no formato Json. */
+ console.log(p1);
+ console.log(p2);
+
  console.log("*******PRODUTOS********");
  console.log(p1.getTexto());
+ console.log(p1.getMsg());
  console.log(p2.getTexto());
+ console.log(p2.getMsg());
  console.log("*******OBRIGADO********");

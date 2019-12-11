@@ -51,6 +51,9 @@ var Produto = /** @class */ (function () {
         texto = " O codigo : " + this.codigo + " \n Produto : " + this.nome + " \n Detalhes : " + this.detalhes + ".\n Pre\u00E7o em R$ " + this.preco + "\n Quantidade em estoque : " + this.estoque + ".\n Link para imagem " + this.linkFoto + ".";
         return texto;
     };
+    Produto.prototype.getMsg = function () {
+        return "Seu " + this.detalhes + " com o pre\u00E7o de R$ " + this.preco + " foi enviado.";
+    };
     return Produto;
 }());
 exports.Produto = Produto;

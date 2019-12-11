@@ -66,6 +66,9 @@ public getTexto(): string{
      
      return texto;
 }
+public getMsg(): string{
+    return `Seu ${this.detalhes} com o preço de R$ ${this.preco} foi enviado.`;
+}
 
 }
 
