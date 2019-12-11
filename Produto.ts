@@ -62,7 +62,7 @@ public setLinkFoto(linkFoto: string): void{
 
 public getTexto(): string{
     var texto: string;
-     texto = `O codigo de produto é ${this.codigo} sendo ele um ${this.nome} e seus detalhes ${this.detalhes}. Preço em R$ ${this.preco}, quantidade em estoque ${this.estoque}. Link para imagem ${this.linkFoto}.`;
+     texto = ` O codigo : ${this.codigo} \n Produto : ${this.nome} \n Detalhes : ${this.detalhes}.\n Preço em R$ ${this.preco}\n Quantidade em estoque : ${this.estoque}.\n Link para imagem ${this.linkFoto}.`;
      
      return texto;
 }
@@ -70,4 +70,29 @@ public getTexto(): string{
 }
 
 
-/*codigo:number, nome:string, detalhes:string, preco:number, estoque:number, linkFoto:string */
+/*Template de Classes em TypeScript
+
+export class [NOME DA CLASSE] {
+   // LISTA DE ATRIBUTOS
+   private [NOME DO ATRIBUTO]: [TIPO];
+   ...
+
+   (opcional)
+   public constructor([LISTA DE PARAMETROS]) {    
+       // CODIGO DAS ATRIBUIÇÕES
+       this.[NOME DO ATRIBUTO] = [NOME DO PARAMETRO];
+       ...
+   }
+
+   (métodos)
+
+   (padrão 1 - getters e setters)
+   public get[NOME DO ATRIBUTO](): [TIPO DO ATRIBUTO]{
+       return this.[NOME DO ATRIBUTO];
+   }
+
+   public set[NOME DO ATRIBUTO]( [NOME DO PARAMETRO] : [TIPO DO PARAMETRO]): void {
+       this.[NOME DO ATRIBUTO] = [NOME DO PARAMETRO];
+   }
+
+} */
